@@ -1,183 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<title>Lina Spa</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lina Spa</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-	<header>
-		<h1>Lina Spa</h1>
-		<nav>
-			<ul>
-				<li><a href="#servicios">Servicios</a></li>
-				<li><a href="#Galeria">Galeria</a></li>
-				<li><a href="#Contacto">Contacto</a></li>
-			</ul>
+  <!-- HEADER -->
+  <header>
+    <h1>Lina Spa</h1>
+    <nav>
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#Galeria">Galeria</a></li>
+        <li><a href="#Contacto">Contacto</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
 
-			
-		
-			<button class ="hamburger" id="hamburger">
-				<span></span>
-			    <span></span>
-			    <span></span>
-		    </button>
-		</nav>
-			
-			
-		</button>
-	</header>
-	
-	<section class="hero">
-		<video src="images&videos/massage-701.mp4" autoplay muted loop></video>
-		
-		<div class="heroContent">
-			<h1>Bienvenidos a nuestro Spa</h1>
-			<p>Relaja y rejuvenece tu cuerpo y mente con nuestra gran variedad de masajes y servicios.</p>
-		</div>
-	</section>
-	
+  <!-- HERO -->
+  <section class="hero">
+    <video src="images&videos/massage-701.mp4" autoplay muted loop></video>
+    <div class="heroContent">
+      <h1>Bienvenidos a nuestro Spa</h1>
+      <p>Relaja y rejuvenece tu cuerpo y mente con nuestra gran variedad de masajes y servicios.</p>
+    </div>
+  </section>
 
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <p>Ofrecemos una variedad de servicios de masajes y más para satisfacer sus necesidades, incluyendo:</p>
+    <ul>
+      <li><a href="relajantes.html">Masajes Relajantes</a></li>
+      <li><a href="reductores.html">Masajes Reductor</a></li>
+      <li><a href="masajespost.html">Masajes Postquirúrgico</a></li>
+      <li><a href="depilacion.html">Depilación Láser</a></li>
+    </ul>
+    <a href="https://wa.me/18093558777" target="_blank">
+      <img src="images&videos/whatsapp.png" alt="WhatsApp button" class="walogoimg">
+    </a>
+  </section>
 
+  <!-- GALERIA -->
+  <section id="Galeria">
+    <h2>Galería</h2>
+    <div class="slider">
+      <div class="slides">
+        <img src="images&videos/madero1.jpg" alt="Spa 1">
+        <img src="images&videos/masaje1.jpg" alt="Spa 2">
+        <img src="images&videos/madero1.jpg" alt="Spa 3">
+        <img src="images&videos/masaje1.jpg" alt="Spa 4">
+      </div>
+      <div class="navigation">
+        <button class="nav-btn" id="prevBtn">❮</button>
+        <button class="nav-btn" id="nextBtn">❯</button>
+      </div>
+    </div>
+  </section>
 
-	<section id="servicios">
-		<h2>Nuestros Servicios</h2>
-		<p>Ofrecemos una variedad de servicios de masajes y mas para satisfacer sus necesidades, incluyendo:</p>
-			<ul>
-				<li><a href="relajantes.html">Masajes Relajantes</a></li>
-				<li><a href="reductores.html">Masajes Reductor</a></li>
-				<li><a href="masajespost.html">Masajes postquirurjico</a></li>
-				<li><a href="depilacion.html">Depilacion laser</a></li>
-				
-	
-			</ul>
-			
-			<a href="HTTPS:/wa.me/18093558777" target="_blank">
-				<img src="images&videos/whatsapp.png" alt="whatsapp button" class="walogoimg">
-				</a>
-		</section>
+  <!-- TESTIMONIOS -->
+  <section class="Testimonios">
+    <h2>Lo que piensan nuestros clientes</h2>
+    <blockquote>"Tuve un masaje muy agradable. El personal me hizo sentir como parte de la familia. Amistosos y muy profesionales."</blockquote>
+    <blockquote>"Excelente servicio y ambiente relajante. Lo recomiendo al 100%."</blockquote>
+  </section>
 
-		<di>
+  <!-- CONTACTO -->
+  <section id="Contacto">
+    <div class="form-container">
+      <div class="form-content">
+        <h2>Agenda tu cita!</h2>
+        <form id="schedulingForm">
+          <div class="form-group">
+            <label for="name">Nombre Completo</label>
+            <input type="text" id="name" required placeholder="Enter your full name">
+          </div>
 
-		</di>
-		<div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="Enter your email">
+          </div>
 
-		</div>
-		<div>
+          <div class="form-group">
+            <label for="date">Fecha Preferida</label>
+            <input type="date" id="date" required>
+          </div>
 
-		</div>
-		<div>
+          <div class="form-group">
+            <label for="time">Hora Preferida</label>
+            <select id="time" required>
+              <option value="">Seleccionar hora</option>
+              <option value="09:00">9:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="14:00">2:00 PM</option>
+              <option value="15:00">3:00 PM</option>
+              <option value="16:00">4:00 PM</option>
+            </select>
+          </div>
 
-		</div>
-	
-		
-		<section id="Galeria">
-		
-			<div class="portfolioimg"></div>
-				<div class="swiper-wrapper">
-				
-					</head>
-					<body>
-					
-					
-					<h2 style="text-align: center; background-color: #cdbbdf;">Galeria</h2>
-					<div class="slider">
-					<div class="slides">
-					<img src="images&videos/madero1.jpg" alt="Spa 1">
-					<img src="images&videos/masaje1.jpg" alt="Spa 2">
-					<img src="images&videos/madero1.jpg" alt="Spa 3">
-					<img src="images&videos/masaje1.jpg" alt="Spa 4">
-					</div>
-					<div class="navigation">
-						<button class="nav-btn" id="prevBtn">❮</button>
-						<button class="nav-btn" id="nextBtn">❯</button>
-					</div>
-				</div>
-				<!-- Add more swiper-slide divs for more images -->
-			</div>
-			
-		</section>
-		
-		
-		<section class= "Testimonios">
-			<h1>Lo que piensan nuestros clientes <h1><P></P>
-				<blockquote>"Tuve un masaje muy agradeble. El personal me hiso sentir como parte de la familia . Amistosos y muy profecionales."</blockquote>
-				<h1></h1>
-				<blockquote>"Tuve un masaje muy agradeble. El personal me hiso sentir como parte de la familia . Amistosos y muy profecionales."</blockquote>
-				
-						
-		</section>
+          <div class="form-group">
+            <label for="notes">Mensaje Adicional</label>
+            <textarea id="notes" rows="3" placeholder="Any special requirements?"></textarea>
+          </div>
 
-		<section id="Contacto">
-			
-			<div class="form-container">
-				<h2>Agenda tu cita!</h2>
-				<form id="schedulingForm">
-				  <div class="form-group">
-					<label for="name">Nombre Completo</label>
-					<input type="text" id="name" required placeholder="Enter your full name">
-				  </div>
-				  
-				  <div class="form-group">
-					<label for="email">Email </label>
-					<input type="email" id="email" required placeholder="Enter your email">
-				  </div>
-				  
-				  <div class="form-group">
-					<label for="date">Fecha Preferida</label>
-					<input type="date" id="date" required>
-				  </div>
-				  
-				  <div class="form-group">
-					<label for="time">Hora Preferida</label>
-					<select id="time" required>
-					  <option value="">Seleccionar hora</option>
-					  <option value="09:00">9:00 AM</option>
-					  <option value="10:00">10:00 AM</option>
-					  <option value="11:00">11:00 AM</option>
-					  <option value="14:00">2:00 PM</option>
-					  <option value="15:00">3:00 PM</option>
-					  <option value="16:00">4:00 PM</option>
-					</select>
-				  </div>
-				  
-				  <div class="form-group">
-					<label for="notes">Mensaje Adicional</label>
-					<textarea id="notes" rows="3" placeholder="Any special requirements?"></textarea>
-				  </div>
-				  
-				  <button type="submit">Agendar cita</button>
-				</form>
-				<div class="success-message">
-				  Su cita a sido agenda gracias! ✨
-				</div>
-			  </div>
-			<a href="HTTPS:/wa.me/18093558777" target="_blank">
-				<img src="images&videos/whatsapp.png" alt="whatsapp button" class="walogoimg">
-				</a>
-			<a href="https://www.google.com/maps?q=19.473752, -70.680157" target="_blank">Plaza Danny Gurabo Santiago
-			</a>
-			
-			
+          <button type="submit">Agendar cita</button>
+        </form>
 
-			</div>
-	
-			
-		</section>
-			
-		
-	
+        <div class="success-message">Su cita ha sido agendada, ¡gracias! ✨</div>
 
-	</main>
-	<footer>
-		<p>Copyright © 2025 Lina Spa.</p>
-	</footer>
-	<script src="app.js"></script>
-<script>
+        <div class="contact-links">
+          <a href="https://wa.me/18093558777" target="_blank">
+            <img src="images&videos/whatsapp.png" alt="whatsapp button" class="walogoimg">
+          </a>
+          <a href="https://www.google.com/maps?q=19.473752,-70.680157" target="_blank">
+            Plaza Danny Gurabo Santiago
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
+  <footer>
+    <p>Copyright © 2025 Lina Spa.</p>
+  </footer>
 
-</script>
-
+  <script src="app.js"></script>
 </body>
 </html>
