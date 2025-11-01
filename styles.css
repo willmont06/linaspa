@@ -1,4 +1,6 @@
 /* ==== GLOBAL RESET & BASE ==== */
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,8 +8,8 @@
   }
   
   body {
-    background-color: #cdbbdf;
-    font-family: Arial, sans-serif;
+    background-color: #bbdf;
+    font-family:'dancing script';
     font-size: 16px;
     line-height: 1.5;
     overflow-x: hidden;
@@ -260,7 +262,7 @@
   .Testimonios blockquote {
     max-width: 700px;
     margin: 20px auto;
-    font-style: italic;
+    font-style: 'poppings', sans-serif;
     font-size: 1.1rem;
     color: #333;
     border-left: 5px solid #6b5b95;
