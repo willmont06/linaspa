@@ -190,10 +190,11 @@
     flex-shrink: 0;
   }
   /* Fix slider navigation buttons */
-.slider button,
-.slider .prev,
-.slider .next {
-  background: rgba(255, 255, 255, 0.6); /* semi-transparent white */
+/* Shared navigation button styles */
+.navigation button,
+.navigation .prev,
+.navigation .next {
+  background: rgba(255, 255, 255, 0.6);
   border: none;
   color: #333;
   font-size: 2rem;
@@ -210,38 +211,21 @@
   transition: background 0.3s ease;
 }
 
-.slider .prev:hover,
-.slider .next:hover {
+/* Hover effects */
+.navigation .prev:hover,
+.navigation .next:hover {
   background: rgba(255, 255, 255, 0.9);
 }
 
 /* Position left and right arrows */
-.slider .prev {
+.navigation .prev {
   left: 10px;
 }
 
-.slider .next {
+.navigation .next {
   right: 10px;
 }
 
-  
-  .navigation {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-  }
-  
-  .nav-btn {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-  }
   
   .nav-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);

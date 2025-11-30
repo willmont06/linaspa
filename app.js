@@ -1,9 +1,10 @@
-console.log ("hello hey there");
+console.log("hello hey there");
+
 // JavaScript for Image Slider
 const slides = document.querySelector('.slides');
 const images = document.querySelectorAll('.slides img');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
 
 let index = 0;
 
@@ -15,14 +16,15 @@ function showSlide() {
 
 // Event Listeners for buttons
 nextBtn.addEventListener('click', () => {
-  index = (index + 1) % images.length; // Loop back to the first slide
+  index = (index + 1) % images.length; 
   showSlide();
 });
 
 prevBtn.addEventListener('click', () => {
-  index = (index - 1 + images.length) % images.length; // Loop back to the last slide
+  index = (index - 1 + images.length) % images.length;
   showSlide();
 });
+
 
 // Handle resizing to make the slider responsive
 window.addEventListener('resize', showSlide);
