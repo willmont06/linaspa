@@ -170,45 +170,51 @@
     margin-top: 20px;
   }
   
-  /* ==== GALERIA ==== */
-  .slider {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 60px auto;
-    overflow: hidden;
-    border-radius: 10px;
+ 
+  .container {
+    perspective: 1000px;
+    width: 300px;
+    height: 400px;  
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
   }
-  
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .slides img {
-    width: 100%;
-    flex-shrink: 0;
-  }
-  /* Fix slider navigation buttons */
-/* Shared navigation button styles */
-.navigation button,
-.navigation .prev,
-.navigation .next {
-  background: rgba(255, 255, 255, 0.6);
-  border: none;
-  color: #333;
-  font-size: 2rem;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.navigation {
+  position: absolute;        /* ← change from relative to absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;              /* covers the entire slider */
+  pointer-events: none;      /* so you don’t block clicks on the images */
+  z-index: 10;
+}
+
+.navigation button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  pointer-events: all;       /* re-enable clicks only on the buttons */
   transition: background 0.3s ease;
+}
+
+.navigation button:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+#prevBtn {
+  left: 20px;                /* left arrow */
+}
+
+#nextBtn {
+  right: 20px;               /* right arrow */
 }
 
 /* Hover effects */

@@ -1,33 +1,6 @@
 console.log("hello hey there");
 
-// JavaScript for Image Slider
-const slides = document.querySelector('.slides');
-const images = document.querySelectorAll('.slides img');
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
 
-let index = 0;
-
-// Function to show the slide at the current index
-function showSlide() {
-  const slideWidth = images[0].clientWidth;
-  slides.style.transform = `translateX(${-index * slideWidth}px)`;
-}
-
-// Event Listeners for buttons
-nextBtn.addEventListener('click', () => {
-  index = (index + 1) % images.length; 
-  showSlide();
-});
-
-prevBtn.addEventListener('click', () => {
-  index = (index - 1 + images.length) % images.length;
-  showSlide();
-});
-
-
-// Handle resizing to make the slider responsive
-window.addEventListener('resize', showSlide);
 
 
 //handle hamburger menu
